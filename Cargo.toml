@@ -2,8 +2,16 @@
 name = "begonia"
 version = "0.1.0"
 authors = ["Bernardo Meurer <meurerbernardo@gmail.com>"]
-edition = "2018"
 
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+categories = [ "authentication", "os" ]
+description = "TUI display manager"
+documentation = "https://docs.rs/begonia"
+edition = "2018"
+homepage = "https://github.com/lovesegfault/begonia"
+keywords = [ "display", "manager", "tui", "linux", "logind" ]
+license = "BSD-3-Clause"
+maintenance = { status = "actively-developed" }
+readme = "./README.md"
+repository = "https://github.com/lovesegfault/begonia"
 
 [dependencies]
