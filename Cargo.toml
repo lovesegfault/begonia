@@ -15,3 +15,4 @@ readme = "./README.md"
 repository = "https://github.com/lovesegfault/begonia"
 
 [dependencies]
+reqwest = "0.10.4"
