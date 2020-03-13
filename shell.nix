@@ -2,7 +2,7 @@ let
   pkgs = import ./nix;
 in
 pkgs.mkShell {
-  name = "chirp";
+  name = "begonia";
   buildInputs = with pkgs; [
     cargo-edit
     crate2nix
