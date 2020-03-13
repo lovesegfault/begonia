@@ -14,8 +14,10 @@ let
             "rust-std"
             "rust-src"
           ];
-        in {
+        in rec {
           rustFull = rustChannel.rust.override { inherit extensions; };
+          cargo = rustChannel.rust;
+          rustc = rustChannel.rust;
         }
     )
     (_: pkgs: { crate2nix = (import sources.crate2nix { inherit pkgs; }); })
