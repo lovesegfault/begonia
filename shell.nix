@@ -1,14 +1,5 @@
-let
-  pkgs = import ./nix;
-in
+with (import ./. {});
 pkgs.mkShell {
   name = "begonia";
-  buildInputs = with pkgs; [
-    cachix
-    cargo-edit
-    crate2nix
-    niv
-    nixpkgs-fmt
-    rustFull
-  ];
+  buildInputs = shellBuildInputs;
 }

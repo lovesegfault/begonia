@@ -10,5 +10,15 @@ let
     runTests = true;
     # testInputs = with pkgs; [ hello ];
   };
-in
-tested
+in {
+  inherit pkgs;
+  begonia = tested;
+  shellBuildInputs = with pkgs; [
+    cachix
+    cargo-edit
+    crate2nix
+    niv
+    nixpkgs-fmt
+    rustFull
+  ];
+}
