@@ -83,8 +83,7 @@ jobs:
           skipNixBuild: true
       - name: crate2nix
         run: |
-          nix-shell
           cmpPath="$(mktemp -d actions.XXXXXX)"
           cp Cargo.nix "$cmpPath"
-          crate2nix generate || exit 1
+          nix-shell --run "crate2nix generate" || exit 1
           diff Cargo.nix "$cmpPath/Cargo.nix" || exit 1
