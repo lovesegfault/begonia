@@ -3,9 +3,7 @@ let
   generated = pkgs.callPackage ./Cargo.nix {
     inherit pkgs;
     defaultCrateOverrides = pkgs.defaultCrateOverrides // {
-      openssl-sys = attrs: {
-        buildInputs = with pkgs; [ openssl pkg-config ];
-      };
+      # example-crate = attrs: { buildInputs = [ openssl ]; };
     };
   };
   tested = generated.rootCrate.build.override {
