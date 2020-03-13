@@ -24,7 +24,7 @@ let
         name = "Parsing";
         run = "find . -name \"*.nix\" -exec nix-instantiate --parse --quiet {} >/dev/null +";
       }];
-      ciCheck = mkJob [{
+      ci = mkJob [{
         name = "Check CI";
         run = ''
           cp ${ciPath} /tmp/ci.reference.yml
