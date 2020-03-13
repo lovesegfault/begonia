@@ -1,2 +1,1 @@
-# begonia
-TUI display manager written in Rust
+# begonia ![CI](https://github.com/lovesegfault/begonia/workflows/CI/badge.svg)
