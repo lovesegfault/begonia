@@ -10,4 +10,5 @@ let
     runTests = true;
     # testInputs = with pkgs; [ hello ];
   };
-in tested
+in
+tested
