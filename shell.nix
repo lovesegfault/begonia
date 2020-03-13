@@ -6,6 +6,7 @@ pkgs.mkShell {
   buildInputs = with pkgs; [
     cargo-edit
     crate2nix
+    niv
     rustFull
   ];
 }
