@@ -67,7 +67,7 @@ let
             cmpPath="$(mktemp -d actions.XXXXXXXX)"
             cp Cargo.nix "$cmpPath/reference.nix"
             nix-shell --run "crate2nix generate"
-            diff Cargo.lock "$cmpPath/reference.nix" || exit 1
+            diff Cargo.nix "$cmpPath/reference.nix" || exit 1
           '';
         }
       ];
