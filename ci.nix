@@ -20,11 +20,11 @@ let
     on.push.branches = [ "*" ];
     on.pull_request.branches = [ "*" ];
     jobs = let
-      cachix = { skipNixBuild ? false }: {
+      cachix = { attributes ? null, skipNixBuild ? false }: {
         name = "Cachix";
         uses = "cachix/cachix-action@v4";
         "with" = {
-          inherit skipNixBuild;
+          inherit attributes skipNixBuild;
           name = "begonia";
           signingKey = "'\${{ secrets.CACHIX_SIGNING_KEY }}'";
         };
@@ -71,7 +71,8 @@ let
           '';
         }
       ];
-      build = mkJob [ (cachix {}) ];
+      build = mkJob [ (cachix { attributes = "begonia"; }) ];
+      shell = mkJob [ (cachix { attributes = "shellBuildInputs"; }) ];
     };
   };
   generated = pkgs.writeText "ci.yml" (toJSON ci);
