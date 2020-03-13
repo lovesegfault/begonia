@@ -10,7 +10,8 @@ let
     runTests = true;
     # testInputs = with pkgs; [ hello ];
   };
-in {
+in
+{
   inherit pkgs;
   begonia = tested;
   shellBuildInputs = with pkgs; [
