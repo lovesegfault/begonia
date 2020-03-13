@@ -18,6 +18,7 @@ let
           rustFull = rustChannel.rust.override { inherit extensions; };
         }
     )
+    (_: pkgs: { crate2nix = (import sources.crate2nix { inherit pkgs; }); })
   ];
 in
 import sources.nixpkgs { inherit overlays; }

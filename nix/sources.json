@@ -1,4 +1,16 @@
 {
+    "crate2nix": {
+        "branch": "master",
+        "description": "nix build file generator for rust crates",
+        "homepage": "",
+        "owner": "kolloch",
+        "repo": "crate2nix",
+        "rev": "f2d16ac47bafc9fe07ca9d66decc78280e0d3b35",
+        "sha256": "1s1rxyjp9k4nwiv4yifzdax8lysgcp36j2lhhf8cjr5kk8526zmh",
+        "type": "tarball",
+        "url": "https://github.com/kolloch/crate2nix/archive/f2d16ac47bafc9fe07ca9d66decc78280e0d3b35.tar.gz",
+        "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
+    },
     "nixpkgs": {
         "branch": "nixos-unstable",
         "description": "A read-only mirror of NixOS/nixpkgs tracking the released channels. Send issues and PRs to",
